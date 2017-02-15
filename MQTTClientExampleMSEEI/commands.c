@@ -1,8 +1,8 @@
 //*****************************************************************************
 //
-// commands.c - FreeRTOS porting example on CCS4
+// commands.c - Implementa el interprete de comandos. Para ello utiliza las bibliotecas
+// cmdline.c y uartsdio.c
 //
-// Este fichero contiene errores que seran explicados en clase
 //
 //*****************************************************************************
 
