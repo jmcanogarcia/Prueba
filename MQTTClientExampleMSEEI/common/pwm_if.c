@@ -3,6 +3,8 @@
  *
  *  Created on: 6 de feb. de 2017
  *      Author: cano
+ *      Libreria basica para gestionar los PWM conectados a los LEDS de la placa (rojo, naranja y verrde)
+ *      Cuidado que los pines son multufuncion.m
  */
 
 // Driverlib includes
