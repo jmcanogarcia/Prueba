@@ -18,15 +18,14 @@
 // CIRCUMSTANCES, BE LIABLE FOR SPECIAL, INCIDENTAL, OR CONSEQUENTIAL
 // DAMAGES, FOR ANY REASON WHATSOEVER.
 // 
-// This is part of revision 2.1.0.12573 of the Tiva Utility Library.
 //
 //*****************************************************************************
 //JMCG, EGP, NHR: Modificado para:
 // -> portada al CC3200...
-// -> Simplificar la rutina de interrupcion, eliminando código y pasándolo a funciones que se llaman desde tareas
+// -> Simplificar la rutina de interrupcion, eliminando codigo y pasandolo a funciones que se llaman desde tareas
 // -> Mejorar la integracion con FreeRTOS mediante colas de mensajes
-// -> Pasar parte del procesado a la función gets, que ademas se hace bloqueante. Esta funcion solo debe usarse en tareas
-// -> Incluir la opción de historial (funcion gets)
+// -> Pasar parte del procesado a la funcion gets, que ademas se hace bloqueante. Esta funcion solo debe usarse en tareas
+// -> Incluir la opcion de historial (funcion gets)
 
 
 
@@ -384,7 +383,7 @@ UARTwrite(const char *pcBuf, uint32_t ui32Len)
 
 //JMCG: Con respecto al original suministrado por Texas Instruments,
 // Se ha pasado gran parte de la ISR a esta funcion (que se ejecutara desde tarea)
-// En concreto se pasa aquí la gestión de los carácteres de borrado, del eco y del historial,
+// En concreto se pasa aquï¿½ la gestiï¿½n de los carï¿½cteres de borrado, del eco y del historial,
 // ya que no tiene sentido hacerlo en la ISR.
 
 
@@ -456,7 +455,7 @@ UARTgets(char *pcBuf, uint32_t ui32Len)
 			//
 			// Check if in an ESC sequence (arrow keys)
 			//
-			// El código de abajo implementa el historial de comandos...
+			// El cï¿½digo de abajo implementa el historial de comandos...
 #ifdef WANT_CMDLINE_HISTORY
 			if (g_ubEscMode != 0)
 			{
@@ -1398,8 +1397,8 @@ UARTEchoSet(bool bEnable)
 //! \return None.
 //
 //*****************************************************************************
-//JMCG: Modificado de forma que la ISR quede lo más corta posible y utilice las colas de mensaje. El procesado de los datos recibido
-// lo completa la funcion UARTgetc o UARTgets, que se ejecutarán desde una tarea.
+//JMCG: Modificado de forma que la ISR quede lo mï¿½s corta posible y utilice las colas de mensaje. El procesado de los datos recibido
+// lo completa la funcion UARTgetc o UARTgets, que se ejecutarï¿½n desde una tarea.
 
 
 void UARTStdioIntHandler(void)
