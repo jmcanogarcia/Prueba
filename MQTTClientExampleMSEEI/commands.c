@@ -47,7 +47,7 @@
 #include "uart_if.h"
 #include "network_if.h"
 
-//#define HEAP_3
+
 
 // ==============================================================================
 // The CPU usage in percent, in 16.16 fixed point format.

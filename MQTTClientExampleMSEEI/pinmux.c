@@ -17,6 +17,8 @@
 // Version: 1.0.2
 //
 //*****************************************************************************
+//Este fichero controla la multiplexacion de pines
+
 
 #include "pinmux.h"
 #include "hw_types.h"
